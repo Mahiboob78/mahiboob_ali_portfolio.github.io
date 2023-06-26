@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- .............................................................HEADER PAGE................................................................................ -->
+    <header>
+        <nav>
+            <h2 id="nav_name">Fullstack Web Developer</h2>
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Contact">Contact</a>
+
+            <script type="text/javascript">
+                window.addEventListener("scroll", function () {
+                    var nav = document.querySelector("nav");
+                    nav.classList.toggle("sticky", window.scrollY > 0);
+                })
+            </script>
+        </nav>
+
+    </header>
+    <section id="Home">
+        <div class="header_page">
+            <div class="content">
+                <marquee direction="left">Currently it is static web page, working on dynamic page</marquee>
+                <div id="header_content">
+                    <span class="title">Freelance Web Developer</span>
+                    <h1>Hello, I’m <span>Mahiboob Ali</span></h1>
+                    <p>I’m working on a professional, visually sophisticated and technologically proficient, responsive
+                        and
+                        multi-functional React Templates.</p>
+                    <a href="#" class="btn">Download CV</a>
+                </div>
+
+                <img src="imgs/ali.jpg" style="width: 500px" id="profile_pic">
+
+            </div>
+        </div>
+    </section>
+    <!-- .............................................................END HEADER PAGE........................................................................... -->
+    <!-- .............................................................ABOU PAGE................................................................................. -->
+    <section id="About">
+        <div class="section1">
+            <h1>About Page</h1>
+            <div class="lines">
+                <div class="circle"></div>
+            </div>
+
+            <div class="about_info">
+                <div class="about_pic">
+                    <img class="" src="imgs/mahi.jpg" alt="" id="about_pic1">
+                </div>
+                <div class="about_data">
+                    <h3 class="">UI/UX Designer & Web Developer</h3>
+                    <div class="lines">
+                        <div class="circle"></div>
+                    </div>
+                    <p>Seeking a position to utilize my skills and abilities in a well reputed organization that offers
+                        professional growth, by being resourceful and innovative willing to work as a key player in
+                        challenging and creative environment.</p>
+                    <div class="personal_info"><br>
+                        <div class=" "> Name: Mahiboob B</div>
+                        <div class=" "> Birthday: 26 June 1999</div>
+                        <div class=" "> Education: Bachelor of Computer Application</div>
+                        <div class=" "> Experience: 1.5 Years</div>
+                        <div class=" "> Phone: +91 8310069342</div>
+                        <div class=" "> Email: mahiboobali498@gmail.com</div>
+                        <div class=" "> Address: Doddakanneli, Bengaluru-35</div>
+                        <div class=" "> Freelance: Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- .............................................................END ABOUT PAGE............................................................................ -->
+
+    <!-- .............................................................SKILLS PAGE............................................................................... -->
+    <section id="Skills">
+        <div class="section2">
+            <h1>Skills Page</h1>
+            <div class="lines">
+                <div class="circle"></div>
+            </div>
+            <div class="skills_container">
+                <div class="skills">
+                    <h1>Fronted Skills</h1>
+                    <li>
+                        <h3>HTML5 90%</h3>
+                        <span class="bar"><span class="html"></span></span>
+                    </li>
+                    <li>
+                        <h3>CSS3 95%</h3>
+                        <span class="bar"><span class="css"></span></span>
+                    </li>
+                    <li>
+                        <h3>React Js 85%</h3>
+                        <span class="bar"><span class="javascript"></span></span>
+                    </li>
+                    <li>
+                        <h3>Javascript 90%</h3>
+                        <span class="bar"><span class="python"></span></span>
+                    </li>
+                </div>
+
+                <div class="skills">
+                    <h1>Backend Skills</h1>
+                    <li>
+                        <h3>Python 90%</h3>
+                        <span class="bar"><span class="html"></span></span>
+                    </li>
+                    <li>
+                        <h3>Django 95%</h3>
+                        <span class="bar"><span class="css"></span></span>
+                    </li>
+                    <li>
+                        <h3>SQL 85%</h3>
+                        <span class="bar"><span class="javascript"></span></span>
+                    </li>
+                    <li>
+                        <h3>GIT 90%</h3>
+                        <span class="bar"><span class="python"></span></span>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- .............................................................END SKILLS PAGE........................................................................... -->
+
+    <!-- .............................................................PROJECTS PAGE............................................................................ -->
+    <section id="Projects">
+        <div class="section3">
+            <h1>My Projects</h1>
+            <div class="lines">
+                <div class="circle"></div>
+            </div>
+            <div id="Portfolio_container">
+                <div class="box">On going projects...<img src="" class="prt_img"></div>
+                <div class="box">On going projects...<img src="" class="prt_img"></div>
+                <div class="box">On going projects...<img src="" class="prt_img"></div>
+                <div class="box">On going projects...<img src="" class="prt_img"></div>
+                <div class="box">On going projects...<img src="" class="prt_img"></div>
+                <div class="box">On going projects...<img src="" class="prt_img"></div>
+            </div>
+        </div>
+    </section>
+    <!-- .............................................................END PROJECTS PAGE......................................................................... -->
+
+    <!-- .............................................................CONTACT PAGE.............................................................................. -->
+    <section id="Contact">
+        <div class="section4">
+            <h1>Contact me</h1>
+            <div class="lines">
+                <div class="circle"></div>
+            </div>
+            <div class="contact_form">
+                <input type="text" class="f_input" placeholder="Your Name" />
+                <input type="text" class="f_input" placeholder="Mobile number" />
+                <input type="text" class="f_input" placeholder="Mail ID" />
+                <input type="text" class="f_input" placeholder="Subject" />
+                <textarea rows="5" class="f_input" placeholder="Message" width="500px"></textarea><br>
+                <input type="submit" value="Send" class="btn">
+            </div>
+        </div>
+    </section>
+    <!-- .............................................................END CONTACT PAGE........................................................................ -->
+
+    <!-- .............................................................FOOTER.................................................................................. -->
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.linkedin.com/in/mahiboob-ali-76a1781b8"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Mahiboob78"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/mahiboob_ali_/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100006885310111"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/AliMahiboob"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="">Doddakanneli, Carmelaram PO, Sarjapura Main road Bengaluru-35</a></li>
+                    <!-- <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">contact</a></li>
+                    <li><a href="">Our Team</a></li> -->
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <div class="footerBottom">
+        <p>Copyright &copy; 2023; Designed by <span class="designer">Mahiboob Ali</span> </p>
+    </div>
+    <!-- .............................................................END FOOTER............................................................................ -->
+
+    <!-- .............................................................ScrollSpy............................................................................ -->
+    <script>
+        let section = document.querySelectorAll('section');
+        let navLinks = document.querySelectorAll('header nav a');
+
+        window.onscroll = () => {
+            section.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 200;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                    });
+                };
+            });
+        }; 
+    </script>
+    <!-- .............................................................END ScrollSpy............................................................................ -->
+</body>
+
+</html>

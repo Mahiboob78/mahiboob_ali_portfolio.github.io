@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ..........................................Boody.................................................. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+hr {
+    width: 50%;
+}
+
+/* ......................................END Boody................................................... */
+
+/* ..........................................NavBar.................................................. */
+.header_page {
+    width: 100%;
+    height: 750px;
+    background-size: cover;
+    background-color: rgb(172, 230, 172);
+}
+
+nav.sticky {
+    padding: 15px 100px;
+    background: rgb(68, 199, 96);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 100px;
+    z-index: 10000;
+
+}
+
+#nav_name {
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(120deg, red 20.69%, blue 50.19%, brown 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0px 100px 0px 50px;
+}
+
+nav a {
+    color: #1d1d24;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.active {
+    padding: 3px 0px 0px 0px;
+    border-bottom: 4px solid darkgreen;
+
+}
+
+nav a.active,
+nav a:hover {
+    color: darkgreen;
+}
+
+nav a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: darkgreen;
+    transition: .3s;
+    bottom: -4px;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+marquee {
+    padding: 70px;
+    color: red;
+}
+
+/* ..........................................END NavBar.................................................. */
+
+/* ..........................................Home.................................................. */
+#header_content {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+
+.content .title {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(120deg, red 20.69%, blue 50.19%, brown 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content h1 {
+    color: #1f1f25;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 90px;
+    text-transform: inherit;
+    width: 58%;
+}
+
+.content h1 span {
+    color: green;
+    font-size: 60px;
+}
+
+.content p {
+    width: 55%;
+    font-weight: 500;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+#profile_pic {
+    float: right;
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    border-radius: 60%;
+}
+
+.btn {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 40px;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    background-size: 152% 100%;
+    background: green;
+    border: 2px solid green;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: transparent;
+    border-color: green;
+    color: green;
+}
+
+/* ..........................................END Home.................................................. */
+
+/* ..........................................ABOUT.................................................. */
+
+.section1 {
+    text-align: center;
+    width: 100%;
+    height: 700px;
+    background-color: rgb(172, 230, 172);
+}
+
+.lines {
+    width: 20%;
+    height: 20px;
+    position: relative;
+    margin: 0 0 0 40%;
+}
+
+.lines::after,
+.lines::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 2px;
+    background: purple;
+    width: 40%;
+    top: 40%;
+}
+
+.lines::after {
+    left: 0;
+}
+
+.lines::before {
+    right: 0;
+}
+
+.circle {
+    height: 15px;
+    width: 15px;
+    border: 2px solid purple;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+
+@media (max-with: 768px) {
+
+    .circle,
+    .diamond {
+        height: 20px;
+        width: 20px;
+    }
+
+    .lines {
+        height: 25px;
+    }
+}
+
+.about_info {
+    padding: 40px 150px;
+
+}
+
+.about_pic,
+.about_data {
+    width: 600px;
+    height: 600px;
+    position: center;
+    float: left;
+}
+
+.about_data {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 450;
+    position: center;
+}
+
+#about_pic1 {
+    border-radius: 5px;
+    height: 500px;
+}
+
+.personal_info {
+    text-align: left;
+}
+
+/* ..........................................END ABOUT.................................................. */
+
+/* ..........................................SKILLS.................................................. */
+
+.section2 {
+    width: 100%;
+    height: 700px;
+    background-color: rgb(172, 230, 172);
+    background-size: cover;
+    font-family: 'Gill Sans', sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.skills_container {
+    display: flex;
+    padding: 0px 200px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    margin: 5px;
+}
+
+.skills {
+    width: 500PX;
+    margin: 50px;
+    color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+}
+
+.skills li {
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.bar {
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgb(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.bar {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+}
+
+.bar span {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1) 0%, rgba(252, 103, 103, 1)100%);
+}
+
+.html {
+    width: 90%;
+    animation: html 3s;
+}
+
+.css {
+    width: 95%;
+    animation: css 3s;
+}
+
+.javascript {
+    width: 85%;
+    animation: javascript 3s;
+}
+
+.python {
+    width: 90%;
+    animation: python 3s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes python {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+/* ..........................................END SKILLS.................................................. */
+
+/* ..........................................PROJECT.................................................. */
+.section3 {
+    width: 100%;
+    height: 700px;
+    background-color: rgb(172, 230, 172);
+    text-align: center;
+    background-size: cover;
+}
+
+#Portfolio_container {
+    padding: 20px;
+    margin: 20px 200px;
+    color: #ccc;
+    /* background-color: rgb(68, 199, 96); */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 500px;
+    width: 75%;
+    align-items: stretch;
+}
+
+/* .prt_img {
+    width: 300px;
+    height: 200px;
+} */
+
+.box {
+    /* background: #f4f4f4; */
+    color: green;
+    border: green solid 3px;
+    width: 300px;
+    height: 200px;
+}
+
+.box:hover {
+    background: transparent;
+    border: #ccc solid 3px;
+    color: #ccc;
+
+    background: #f4f4f4;
+    /* border: #ccc solid 3px; */
+}
+
+/* ..........................................END PROJECT.................................................. */
+
+/* ..........................................CONTACT.................................................. */
+.section4 {
+    width: 100%;
+    height: 700px;
+    background-color: rgb(172, 230, 172);
+    text-align: center;
+    background-size: cover;
+
+}
+
+.contact_form {
+    padding: 50px 50px;
+    margin: 20px 400px;
+    width: 700px;
+    /* background-color: rgb(68, 199, 96); */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.5em;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    min-height: 40vh;
+}
+
+.f_input {
+    width: 100%;
+    margin: 0 0 10px;
+    background-color: rgb(172, 230, 172);
+    border: 2px solid green;
+    border-radius: 10px;
+    /* padding: 10px; */
+    font-size: 20px;
+}
+
+/* ..........................................END CONTACT.................................................. */
+
+/* ..........................................FOOTER.................................................. */
+footer {
+    background-color: rgb(68, 199, 96);
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: rgb(68, 199, 96);
+    opacity: 0.9;
+}
+
+/* Hover effect on Social Media icons */
+.socialIcons a:hover {
+    background-color: rgb(68, 199, 96);
+    transition: 0.5s;
+}
+
+.socialIcons a i:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footerNav ul a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul a:hover {
+    opacity: 2;
+}
+
+.footerBottom {
+    background-color: green;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+/* ..........................................END FOOTER.................................................. */
