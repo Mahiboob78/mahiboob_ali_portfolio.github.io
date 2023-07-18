@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-    <link href="css/index.css" rel="stylesheet">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="flexx.css">
+    <link rel="stylesheet" href="moble_layout.css">
+    <link rel="stylesheet" href="tab_layout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <!-- .............................................................HEADER PAGE................................................................................ -->
     <header>
         <nav>
-            <h2 id="nav_name">Fullstack Web Developer</h2>
+            <h3 id="nav_name">FREELANCER</h3>
             <a class="active" href="#Home">Home</a>
             <a href="#About">About</a>
             <a href="#Skills">Skills</a>
@@ -29,73 +30,75 @@
                 })
             </script>
         </nav>
-
+        
+        <div class="hamburger">
+            <span>Freelancer</span>
+            <span class="menu">&#9776;</span>
+        </div>
+        <script>
+            hamburger = document.querySelector(".hamburger");
+            hamburger.onclick = function () {
+              navBar = document.querySelector("nav");
+              navBar.classList.toggle("active");
+            }
+          </script>
     </header>
-    <section id="Home">
-        <div class="header_page">
-            <div class="content">
-                <marquee direction="left">Currently it is static web page, working on dynamic page</marquee>
-                <div id="header_content">
-                    <span class="title">Freelance Web Developer</span>
-                    <h1>Hello, I’m <span>Mahiboob Ali</span></h1>
-                    <p>I’m working on a professional, visually sophisticated and technologically proficient, responsive
-                        and
-                        multi-functional React Templates.</p>
-                    <a href="#" class="btn">Download CV</a>
-                </div>
-
-                <img src="imgs/ali.jpg" style="width: 500px" id="profile_pic">
-
+    <main>
+        <!-- * ***************************************************HOME PAGE***************************************************************** * -->
+        <marquee direction="left">Currently it is static web page, working on dynamic page</marquee>
+        <section id="Home" class="home_section">
+            <div class="home_left_section">
+                <span class="title">Fullstack Web Developer</span>
+                <h1>Hello, I’m <span>Mahiboob Ali</span></h1>
+                <p>I’m working on a professional, visually sophisticated and technologically proficient, responsive
+                    and
+                    multi-functional React Templates.</p>
+                <a href="#" class="btn">Download CV</a>
             </div>
+            <div class="home_right_section">
+                <!-- <img src="ali.jpg" alt="" id="profile_img"> -->
+            </div>
+        </section>
+        <!-- * ***********************************************END HOME PAGE***************************************************************** * -->
+        <h2>About Page</h2>
+        <div class="lines">
+            <div class="circle"></div>
         </div>
-    </section>
-    <!-- .............................................................END HEADER PAGE........................................................................... -->
-    <!-- .............................................................ABOU PAGE................................................................................. -->
-    <section id="About">
-        <div class="section1">
-            <h1>About Page</h1>
-            <div class="lines">
-                <div class="circle"></div>
+        <!-- * ***************************************************ABOT PAGE***************************************************************** * -->
+        <section id="About" class="about_section">
+            <div class="about_left_section">
+                <!-- <img class="" src="imgs/mahi.jpg" alt="" id="about_pic1"> -->
             </div>
-
-            <div class="about_info">
-                <div class="about_pic">
-                    <img class="" src="imgs/mahi.jpg" alt="" id="about_pic1">
+            <div class="about_right_section">
+                <h3 class="">UI/UX Designer & Web Developer</h3>
+                <div class="lines">
+                    <div class="circle"></div>
                 </div>
-                <div class="about_data">
-                    <h3 class="">UI/UX Designer & Web Developer</h3>
-                    <div class="lines">
-                        <div class="circle"></div>
-                    </div>
-                    <p>Seeking a position to utilize my skills and abilities in a well reputed organization that offers
-                        professional growth, by being resourceful and innovative willing to work as a key player in
-                        challenging and creative environment.</p>
-                    <div class="personal_info"><br>
-                        <div class=" "> Name: Mahiboob B</div>
-                        <div class=" "> Birthday: 26 June 1999</div>
-                        <div class=" "> Education: Bachelor of Computer Application</div>
-                        <div class=" "> Experience: 1.5 Years</div>
-                        <div class=" "> Phone: +91 8310069342</div>
-                        <div class=" "> Email: mahiboobali498@gmail.com</div>
-                        <div class=" "> Address: Doddakanneli, Bengaluru-35</div>
-                        <div class=" "> Freelance: Available</div>
-                    </div>
+                <p>Seeking a position to utilize my skills and abilities in a well reputed organization that offers
+                    professional growth, by being resourceful and innovative willing to work as a key player in
+                    challenging and creative environment.</p>
+                <div class="personal_info"><br>
+                    <div class=" "> Name: Mahiboob B</div>
+                    <div class=" "> Birthday: 26 June 1999</div>
+                    <div class=" "> Education: Bachelor of Computer Application</div>
+                    <div class=" "> Experience: 1.5 Years</div>
+                    <div class=" "> Phone: +91 8310069342</div>
+                    <div class=" "> Email: mahiboobali498@gmail.com</div>
+                    <div class=" "> Address: Doddakanneli, Bengaluru-35</div>
+                    <div class=" "> Freelance: Available</div>
                 </div>
             </div>
+        </section>
+        <!-- * ***************************************************END ABOUT PAGE************************************************************** * -->
+        <h2>Skills Page</h2>
+        <div class="lines">
+            <div class="circle"></div>
         </div>
-    </section>
-    <!-- .............................................................END ABOUT PAGE............................................................................ -->
-
-    <!-- .............................................................SKILLS PAGE............................................................................... -->
-    <section id="Skills">
-        <div class="section2">
-            <h1>Skills Page</h1>
-            <div class="lines">
-                <div class="circle"></div>
-            </div>
+        <!-- * ***************************************************SKILLS PAGE***************************************************************** * -->
+        <section id="Skills" class="skills_section">
             <div class="skills_container">
                 <div class="skills">
-                    <h1>Fronted Skills</h1>
+                    <h2>Fronted Skills</h2>
                     <li>
                         <h3>HTML5 90%</h3>
                         <span class="bar"><span class="html"></span></span>
@@ -113,9 +116,10 @@
                         <span class="bar"><span class="python"></span></span>
                     </li>
                 </div>
-
+            </div>
+            <div class="skills_container">
                 <div class="skills">
-                    <h1>Backend Skills</h1>
+                    <h2>Backend & Tool Skills</h2>
                     <li>
                         <h3>Python 90%</h3>
                         <span class="bar"><span class="html"></span></span>
@@ -134,37 +138,33 @@
                     </li>
                 </div>
             </div>
+        </section>
+        <!-- * ***************************************************END SKILLS PAGE***************************************************************** * -->
+        <h2>Project Page</h2>
+        <div class="lines">
+            <div class="circle"></div>
         </div>
-    </section>
-    <!-- .............................................................END SKILLS PAGE........................................................................... -->
-
-    <!-- .............................................................PROJECTS PAGE............................................................................ -->
-    <section id="Projects">
-        <div class="section3">
-            <h1>My Projects</h1>
-            <div class="lines">
-                <div class="circle"></div>
+        <!-- * ***************************************************PROJECT PAGE***************************************************************** * -->
+        <section id="Projects" class="projects_section">
+            <div class="project_container">
+                <div id="Portfolio_container">
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                </div>
             </div>
-            <div id="Portfolio_container">
-                <div class="box">On going projects...<img src="" class="prt_img"></div>
-                <div class="box">On going projects...<img src="" class="prt_img"></div>
-                <div class="box">On going projects...<img src="" class="prt_img"></div>
-                <div class="box">On going projects...<img src="" class="prt_img"></div>
-                <div class="box">On going projects...<img src="" class="prt_img"></div>
-                <div class="box">On going projects...<img src="" class="prt_img"></div>
-            </div>
+        </section>
+        <!-- * ***************************************************END PROJECT PAGE***************************************************************** * -->
+        <h2>Contact Page</h2>
+        <div class="lines">
+            <div class="circle"></div>
         </div>
-    </section>
-    <!-- .............................................................END PROJECTS PAGE......................................................................... -->
-
-    <!-- .............................................................CONTACT PAGE.............................................................................. -->
-    <section id="Contact">
-        <div class="section4">
-            <h1>Contact me</h1>
-            <div class="lines">
-                <div class="circle"></div>
-            </div>
-            <div class="contact_form">
+        <!-- * ***************************************************CONTACT PAGE***************************************************************** * -->
+        <section id="Contact" class="contact_section">
+            <div class="contact_container">
                 <input type="text" class="f_input" placeholder="Your Name" />
                 <input type="text" class="f_input" placeholder="Mobile number" />
                 <input type="text" class="f_input" placeholder="Mail ID" />
@@ -172,11 +172,11 @@
                 <textarea rows="5" class="f_input" placeholder="Message" width="500px"></textarea><br>
                 <input type="submit" value="Send" class="btn">
             </div>
-        </div>
-    </section>
-    <!-- .............................................................END CONTACT PAGE........................................................................ -->
+        </section>
+        <!-- * ***************************************************END CONTACT PAGE***************************************************************** * -->
+    </main>
 
-    <!-- .............................................................FOOTER.................................................................................. -->
+    <!-- * ***************************************************FOOTER PAGE***************************************************************** * -->
     <footer>
         <div class="footerContainer">
             <div class="socialIcons">
@@ -203,9 +203,8 @@
     <div class="footerBottom">
         <p>Copyright &copy; 2023; Designed by <span class="designer">Mahiboob Ali</span> </p>
     </div>
-    <!-- .............................................................END FOOTER............................................................................ -->
+    <!-- * ***************************************************END FOOTER PAGE***************************************************************** * -->
 
-    <!-- .............................................................ScrollSpy............................................................................ -->
     <script>
         let section = document.querySelectorAll('section');
         let navLinks = document.querySelectorAll('header nav a');
@@ -225,7 +224,6 @@
             });
         }; 
     </script>
-    <!-- .............................................................END ScrollSpy............................................................................ -->
 </body>
 
 </html>
