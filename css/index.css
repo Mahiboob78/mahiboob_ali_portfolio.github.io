@@ -1,174 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* ..........................................Boody.................................................. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
+    text-align: center;
 }
 
+header {
+    width: 100%;
+    height: 10vh;
+    background: rgb(148, 207, 148);
+
+    /* border: 2px black solid; */
+}
+
+footer {
+    width: 100%;
+    height: 30vh;
+    background: rgb(44, 192, 76);
+
+    /* border: 2px black solid; */
+}
+
+main {
+    width: 100%;
+    height: 450vh;
+    justify-content: center;
+    background: rgb(148, 207, 148);
+
+    /* border: 3px black solid; */
+}
+
+section {
+    width: 90%;
+    height: 80vh;
+    background: rgb(148, 207, 148);
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+    /* border: 3px black solid; */
+}
+/***************************************************LINES CONTENT****************************************************/
 hr {
     width: 50%;
-}
-
-/* ......................................END Boody................................................... */
-
-/* ..........................................NavBar.................................................. */
-.header_page {
-    width: 100%;
-    height: 750px;
-    background-size: cover;
-    background-color: rgb(172, 230, 172);
-}
-
-nav.sticky {
-    padding: 15px 100px;
-    background: rgb(68, 199, 96);
-}
-
-nav {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    padding: 20px 100px;
-    z-index: 10000;
-
-}
-
-#nav_name {
-    font-size: 18px;
-    font-weight: 600;
-    background: linear-gradient(120deg, red 20.69%, blue 50.19%, brown 79.69%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 0px 100px 0px 50px;
-}
-
-nav a {
-    color: #1d1d24;
-    font-weight: 600;
-    text-decoration: none;
-    position: relative;
-
-}
-
-.active {
-    padding: 3px 0px 0px 0px;
-    border-bottom: 4px solid darkgreen;
-
-}
-
-nav a.active,
-nav a:hover {
-    color: darkgreen;
-}
-
-nav a:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 4px;
-    background: darkgreen;
-    transition: .3s;
-    bottom: -4px;
-}
-
-nav a:hover:after {
-    width: 100%;
-}
-
-marquee {
-    padding: 70px;
-    color: red;
-}
-
-/* ..........................................END NavBar.................................................. */
-
-/* ..........................................Home.................................................. */
-#header_content {
-    position: absolute;
-    top: 25%;
-    left: 10%;
-}
-
-.content .title {
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    display: inline-block;
-    margin-bottom: 20px;
-    background: linear-gradient(120deg, red 20.69%, blue 50.19%, brown 79.69%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.content h1 {
-    color: #1f1f25;
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 90px;
-    text-transform: inherit;
-    width: 58%;
-}
-
-.content h1 span {
-    color: green;
-    font-size: 60px;
-}
-
-.content p {
-    width: 55%;
-    font-weight: 500;
-    margin-top: 25px;
-    margin-bottom: 30px;
-}
-
-#profile_pic {
-    float: right;
-    position: absolute;
-    top: 15%;
-    right: 10%;
-    border-radius: 60%;
-}
-
-.btn {
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 16px 40px;
-    border-radius: 500px;
-    display: inline-block;
-    font-weight: 500;
-    transition: all .4s ease-in-out;
-    background-size: 152% 100%;
-    background: green;
-    border: 2px solid green;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background: transparent;
-    border-color: green;
-    color: green;
-}
-
-/* ..........................................END Home.................................................. */
-
-/* ..........................................ABOUT.................................................. */
-
-.section1 {
-    text-align: center;
-    width: 100%;
-    height: 700px;
-    background-color: rgb(172, 230, 172);
 }
 
 .lines {
@@ -177,7 +54,9 @@ marquee {
     position: relative;
     margin: 0 0 0 40%;
 }
-
+.about_info{
+    display: flex;
+}
 .lines::after,
 .lines::before {
     content: '';
@@ -209,95 +88,218 @@ marquee {
     border-radius: 50%;
 }
 
-@media (max-with: 768px) {
+/***************************************************END LINES CONTENT****************************************************/
 
-    .circle,
-    .diamond {
-        height: 20px;
-        width: 20px;
-    }
+/*.................................................NAVIGATION SECTION...................................................*/
 
-    .lines {
-        height: 25px;
-    }
+nav.sticky {
+    padding: 1rem 6.2rem;
+    background: rgb(44, 192, 76);
 }
 
-.about_info {
-    padding: 40px 150px;
-
-}
-
-.about_pic,
-.about_data {
-    width: 600px;
-    height: 600px;
-    position: center;
-    float: left;
-}
-
-.about_data {
-    padding: 15px;
-    font-size: 18px;
-    font-weight: 450;
-    position: center;
-}
-
-#about_pic1 {
-    border-radius: 5px;
-    height: 500px;
-}
-
-.personal_info {
-    text-align: left;
-}
-
-/* ..........................................END ABOUT.................................................. */
-
-/* ..........................................SKILLS.................................................. */
-
-.section2 {
+nav {
+    position: fixed;
     width: 100%;
-    height: 700px;
-    background-color: rgb(172, 230, 172);
-    background-size: cover;
-    font-family: 'Gill Sans', sans-serif;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 1.2rem 6.2rem;
+    z-index: 10000;
 
 }
+
+#nav_name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    background: linear-gradient(120deg, red 20.69%, blue 50.19%, brown 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0px 200px 0px 20px;
+}
+
+nav a {
+    color: #1d1d24;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.active {
+    padding: 0.18rem 0 0 0;
+    border-bottom: 4px solid darkgreen;
+
+}
+
+nav a.active,
+nav a:hover {
+    color: darkgreen;
+}
+
+nav a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0.25rem;
+    background: darkgreen;
+    transition: .3s;
+    bottom: -0.25rem;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+.hamburger{
+    display: none;
+}
+/*.................................................END NAVIGATION SECTION...................................................*/
+
+/***************************************************END MAIN CONTENT****************************************************/
+
+/*.....................................................HOME SECTION...................................................*/
+marquee {
+    color: red;
+}
+.home_left_section {
+    width: 40%;
+    height: 90%;
+    padding: 6rem 2rem 0 1rem;
+
+    /* border: 3px blue solid;
+    background: yellow; */
+}
+.home_right_section {
+    width: 40%;
+    height: 90%;
+    margin: 1rem 0 0 0;
+    background-size: cover;
+    background-image: url(imgs/ali.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 6px red solid;
+    border-radius: 90%;
+
+
+    /* border: 4px red solid;
+    background: lime; */
+}
+.title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    background: linear-gradient(120deg, red 20.69%, blue 50.19%, brown 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home_left_section h1 {
+    color: #1f1f25;
+    font-size: 2rem;
+    /* font-weight: 900; */
+    line-height: 5.5rem;
+    text-transform: inherit;
+}
+
+.home_left_section h1 span {
+    color: green;
+    font-size: 3.5rem;
+}
+
+.home_left_section p {
+    width: 95%;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.btn {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 1rem 2.5rem;
+    border-radius: 31rem;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    background-size: 152% 100%;
+    background: green;
+    border: 0.15rem solid green;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: transparent;
+    border-color: green;
+    color: green;
+}
+/*.....................................................END HOME SECTION...................................................*/
+
+/*.....................................................ABOUT SECTION...................................................*/
+.about_left_section {
+    width: 40%;
+    height: 90%;
+    border-radius: 5%;
+    margin: 1rem 0 0 0;
+    background-size: cover;
+    background-image: url(imgs/mahi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* border: 3px white solid;
+    background: brown; */
+}
+
+.about_right_section {
+    width: 40%;
+    height: 90%;
+    padding: 3rem 2rem 0 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    /* border: 3px red solid;
+    background: wheat; */
+}
+/*.....................................................END ABOUT SECTION...................................................*/
 
 .skills_container {
-    display: flex;
-    padding: 0px 200px;
+    width: 40%;
+    height: 90%;
+    border-radius: 5%;
+    list-style: none;
+    margin: 1rem;
+    color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgb(148, 207, 148);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+
+    /* border: 3px white solid; */
+    /* background: mediumslateblue; */
 }
 
-h1 {
+h2 {
     text-align: center;
 }
 
 h3 {
-    margin: 5px;
-}
-
-.skills {
-    width: 500PX;
-    margin: 50px;
-    color: #000;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+    margin: 0.31rem;
 }
 
 .skills li {
-    margin: 20px 0;
-    padding: 10px;
+    margin: 1.25rem 0;
+    padding: 0.62rem;
 }
 
 .bar {
     background: #353b48;
     display: block;
-    height: 20px;
+    height: 1.25rem;
     border: 1px solid rgb(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden;
@@ -375,96 +377,73 @@ h3 {
     }
 }
 
-/* ..........................................END SKILLS.................................................. */
-
-/* ..........................................PROJECT.................................................. */
-.section3 {
-    width: 100%;
-    height: 700px;
-    background-color: rgb(172, 230, 172);
-    text-align: center;
-    background-size: cover;
-}
-
+/*******************************Projects Section****************************************************/
+/* .project_container {
+    width: 80%;
+    height: 90%;
+    border: 3px brown solid;
+    background: gainsboro;
+    margin: auto;
+} */
 #Portfolio_container {
-    padding: 20px;
-    margin: 20px 200px;
+    margin: auto;
+    padding: 1.2rem;
+    height: 500px;
+    width: 80%;
     color: #ccc;
-    /* background-color: rgb(68, 199, 96); */
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 500px;
-    width: 75%;
     align-items: stretch;
 }
-
-/* .prt_img {
-    width: 300px;
-    height: 200px;
-} */
-
 .box {
-    /* background: #f4f4f4; */
     color: green;
     border: green solid 3px;
     width: 300px;
     height: 200px;
 }
-
 .box:hover {
     background: transparent;
     border: #ccc solid 3px;
     color: #ccc;
-
     background: #f4f4f4;
-    /* border: #ccc solid 3px; */
 }
+/*******************************End Projects Section****************************************************/
 
-/* ..........................................END PROJECT.................................................. */
-
-/* ..........................................CONTACT.................................................. */
-.section4 {
-    width: 100%;
-    height: 700px;
-    background-color: rgb(172, 230, 172);
-    text-align: center;
-    background-size: cover;
-
-}
-
-.contact_form {
+/*******************************Contact Section****************************************************/
+.contact_container{
+    width: 80%;
+    height: 90%;
+    margin: auto;
     padding: 50px 50px;
-    margin: 20px 400px;
-    width: 700px;
-    /* background-color: rgb(68, 199, 96); */
+    margin: auto;
+    width: 75%;
+    height: 100%;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
     font-family: 'Open Sans', sans-serif;
     font-size: 0.5em;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     min-height: 40vh;
-}
 
+    /* border: 3px brown solid;
+    background: gainsboro; */
+}
 .f_input {
     width: 100%;
+    padding: 0.4rem;
     margin: 0 0 10px;
     background-color: rgb(172, 230, 172);
     border: 2px solid green;
     border-radius: 10px;
-    /* padding: 10px; */
     font-size: 20px;
 }
 
-/* ..........................................END CONTACT.................................................. */
+/*******************************End Conatct Section****************************************************/
 
-/* ..........................................FOOTER.................................................. */
-footer {
-    background-color: rgb(68, 199, 96);
-}
-
+/*.................................................FOOTER SECTION...................................................*/
 .footerContainer {
     width: 100%;
     padding: 70px 30px 20px;
@@ -542,7 +521,7 @@ footer {
     margin: 0px 5px;
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
     .footerNav ul {
         flex-direction: column;
     }
@@ -552,6 +531,5 @@ footer {
         text-align: center;
         margin: 10px;
     }
-}
-
-/* ..........................................END FOOTER.................................................. */
+} */
+/*...............................................END FOOTER SECTION...................................................*/
