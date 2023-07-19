@@ -1,0 +1,352 @@
+/********************************************************Mobile Small Size*********************************************************************/
+@media (min-width: 300px) and (max-width: 399px) {
+
+    /*.....................................Navigation section............................................................*/
+    .hamburger {
+        top: 0;
+        left: 0;
+        display: flex;
+        text-transform: uppercase;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        background: linear-gradient(120deg, red 10.69%, blue 30.19%, brown 60.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .menu {
+        font-size: 30px;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: black;
+        margin: 8px 0;
+    }
+
+    #nav_name {
+        display: none;
+    }
+
+    nav.sticky {
+        display: none;
+    }
+
+    nav {
+        height: 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: rgb(148, 207, 148);
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        justify-content: space-evenly;
+        opacity: 0;
+    }
+
+    nav.active {
+        height: 350px;
+        opacity: 1;
+    }
+
+    /*.....................................End Navigation Bar.......................................................*/
+
+    main {
+        width: 100%;
+        height: 740vh;
+        justify-content: center;
+
+        /* border: 3px gray solid; */
+    }
+
+    /*.....................................home section......................................................................*/
+    .home_section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        /* border: 3px black solid;
+        background: lightgreen; */
+
+    }
+
+    .home_left_section {
+        width: 98%;
+        height: 55%;
+        padding: 2rem 1rem 0 1rem;
+
+        /* border: 3px blue solid;
+        background: yellow; */
+    }
+
+    #profile_img {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 90%;
+        border: 6px red solid;
+    }
+
+    @media (min-width: 330px) and (max-width: 350px) {
+        #profile_img {
+            width: 18rem;
+            height: 18rem;
+            border-radius: 90%;
+            border: 6px red solid;
+        }
+
+        .home_right_section {
+            width: 90%;
+            height: 60%;
+            border-radius: 90%;
+            padding: 0;
+            margin-top: 2rem;
+        }
+    }
+
+    .home_right_section {
+        width: 90%;
+        height: 45%;
+        border-radius: 90%;
+
+    }
+
+    .title {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        display: inline-block;
+        margin-bottom: 0.1rem;
+        background: linear-gradient(120deg, red 20.69%, blue 50.19%, brown 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .home_left_section h1 {
+        color: #1f1f25;
+        font-size: 1.2rem;
+        line-height: 3rem;
+        text-transform: inherit;
+    }
+
+    .home_left_section h1 span {
+        color: green;
+        font-size: 2.5rem;
+    }
+
+    .home_left_section p {
+        width: 95%;
+        font-weight: 500;
+        margin-top: 0.8rem;
+        margin-bottom: 3rem;
+    }
+
+    .btn {
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        padding: 1rem 2rem;
+        border-radius: 31rem;
+        font-weight: 500;
+        transition: all .4s ease-in-out;
+        background: green;
+        border: 0.15rem solid green;
+        text-decoration: none;
+    }
+
+    /*.....................................end home section....................................................................*/
+
+    /*.....................................about section......................................................................*/
+    .about_section {
+        width: 100%;
+        height: 145vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        /* border: 3px black solid;
+        background: lightgreen; */
+
+    }
+
+    #about_pic1 {
+        width: 20rem;
+        height: 26rem;
+        border-radius: 5%;
+
+    }
+
+    @media (min-width: 330px) and (max-width: 350px) {
+        #about_pic1 {
+            width: 18rem;
+            height: 26rem;
+            border-radius: 5%;
+        }
+    }
+
+    .about_left_section {
+        width: 90%;
+        height: 90%;
+        border-radius: 5%;
+        padding: 0;
+
+        /* border: 3px white solid; */
+    }
+
+    .about_right_section {
+        width: 100%;
+        /* height: 80%; */
+        padding: 1rem 2rem 1rem 2rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        /* border: 3px red solid;
+        background: gainsboro; */
+    }
+
+    /*.....................................end about section......................................................................*/
+
+    /*.....................................skills section......................................................................*/
+    .skills_section {
+        width: 100%;
+        height: 140vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        /* border: 3px black solid;
+        background: lightgreen; */
+
+    }
+
+    .skills_container {
+        width: 85%;
+        height: 90%;
+        border-radius: 5%;
+
+        /* border: 3px white solid; */
+    }
+
+    /*.....................................end skills section......................................................................*/
+
+    /*.....................................projects section......................................................................*/
+    .projects_section {
+        width: 100%;
+        height: 250vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        /* border: 3px blue solid;
+        background: lightgreen; */
+    }
+
+    #Portfolio_container {
+        margin: auto;
+        padding: 0.5rem;
+        height: 240vh;
+        width: 80%;
+        color: #ccc;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .box {
+        color: green;
+        border: green solid 3px;
+        width: 350px;
+        height: 250px;
+    }
+
+    .box:hover {
+        background: transparent;
+        border: #ccc solid 3px;
+        color: #ccc;
+        background: #f4f4f4;
+    }
+
+    /*.....................................end projects section......................................................................*/
+
+    /*.....................................contact section......................................................................*/
+    .contact_container {
+        width: 95%;
+        height: 70%;
+        margin: 0;
+        padding: 10px 10px;
+
+        /* border: 3px brown solid; */
+    }
+
+    .f_input {
+        width: 100%;
+        padding: 0.4rem;
+        margin: 0 0 5px;
+        background-color: rgb(172, 230, 172);
+        border: 2px solid green;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    /*.....................................end contact section......................................................................*/
+
+    /*.....................................Footer section......................................................................*/
+    .footerContainer {
+        width: 100%;
+        padding: 40px 18px 18px;
+        text-align: center;
+    }
+
+    .footerNav ul a {
+        color: white;
+        margin: 20px;
+        text-decoration: none;
+        font-size: 1em;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 10px;
+        border-radius: 50%;
+    }
+
+    .socialIcons a i {
+        font-size: 1em;
+        color: rgb(68, 199, 96);
+        opacity: 0.9;
+    }
+
+    .footerBottom {
+        background-color: green;
+        padding: 10px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /*.....................................end footer section......................................................................*/
+
+}
+
+/**********************************************************End Mobile Size**************************************************************************/

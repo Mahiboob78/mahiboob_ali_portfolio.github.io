@@ -1,0 +1,268 @@
+@media (min-width: 701px) and (max-width: 880px) {
+    .hamburger {
+        top: 0;
+        left: 0;
+        display: flex;
+        text-transform: uppercase;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 3rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        background: linear-gradient(120deg, red 10.69%, blue 30.19%, brown 60.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .menu {
+        font-size: 40px;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        margin: 8px 0;
+        background: black;
+    }
+
+    #nav_name {
+        display: none;
+    }
+
+    nav.sticky {
+        display: none;
+    }
+
+    nav {
+        height: 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: rgb(148, 207, 148);
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        justify-content: space-evenly;
+        opacity: 0;
+    }
+
+    nav.active {
+        height: 350px;
+        opacity: 1;
+    }
+
+    main {
+        width: 100%;
+        height: 580vh;
+        justify-content: center;
+
+        /* border: 3px gray solid; */
+    }
+
+    section {
+        width: 95%;
+        height: 80vh;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+
+        /* border: 3px black solid;
+        background: lightgreen; */
+
+    }
+
+    /*.....................................home section......................................................................*/
+    .home_section {
+        height: 55vh;
+
+        /* border: 3px black solid;
+        background: lightgreen; */
+
+    }
+
+    .home_left_section {
+        width: 50%;
+        height: 80%;
+        padding: 1rem 0 0 0;
+
+        /* border: 3px blue solid;
+        background: yellow; */
+    }
+
+    .home_right_section {
+        width: 50%;
+        height: 80%;
+        margin: 0;
+
+        /* border: 3px red solid; */
+    }
+
+    #profile_img {
+        width: 21rem;
+        height: 21rem;
+        border-radius: 90%;
+        border: 6px red solid;
+    }
+
+    .title {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        display: inline-block;
+        margin-bottom: 0.2rem;
+        background: linear-gradient(120deg, red 20.69%, blue 50.19%, brown 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .home_left_section h1 {
+        color: #1f1f25;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        text-transform: inherit;
+    }
+
+    .home_left_section h1 span {
+        color: green;
+        font-size: 2.2rem;
+    }
+
+    .home_left_section p {
+        width: 95%;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rex;
+        padding: 1rem 2rem;
+        border-radius: 31rem;
+        font-weight: 500;
+        transition: all .4s ease-in-out;
+        background: green;
+        border: 0.15rem solid green;
+        text-decoration: none;
+    }
+
+    /*.....................................end home section....................................................................*/
+
+    /*.....................................about section......................................................................*/
+    .about_left_section {
+        width: 50%;
+        height: 90%;
+        padding: 0;
+
+        /* border: 3px white solid; */
+    }
+
+    #about_pic1 {
+        width: 20rem;
+        height: 25rem;
+        margin-top: 2rem;
+        border-radius: 5px;
+
+    }
+
+    .about_right_section {
+        width: 50%;
+        height: 95%;
+        padding: 0;
+        font-size: 1.1rem;
+        font-weight: 500;
+
+        /* border: 3px red solid;
+        background: wheat; */
+    }
+
+    /*.....................................end about section......................................................................*/
+    /*.....................................skills section......................................................................*/
+
+    .skills_container {
+        width: 40%;
+        height: 90%;
+        border-radius: 5%;
+
+        /* border: 3px white solid;
+    background: mediumslateblue; */
+    }
+
+    /*.....................................end skills section......................................................................*/
+    /*.....................................projects section......................................................................*/
+    .projects_section {
+        width: 90%;
+        height: 250vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        /* border: 3px blue solid;
+        background: lightgreen; */
+    }
+
+    #Portfolio_container {
+        margin: auto;
+        padding: 1.2rem;
+        height: 240vh;
+        width: 80%;
+        color: #ccc;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .box {
+        color: green;
+        border: green solid 3px;
+        width: 350px;
+        height: 250px;
+    }
+
+    /*.....................................end projects section......................................................................*/
+    /*.....................................contact section......................................................................*/
+    .contact_container {
+        width: 80%;
+        height: 90%;
+        padding: 30px 30px;
+        background: lightgreen;
+        margin: 0;
+
+        /* border: 3px brown solid; */
+    }
+
+    /*.....................................end contact section......................................................................*/
+
+    /*.....................................Footer section......................................................................*/
+    .footerContainer {
+        width: 100%;
+        padding: 40px 10px 10px;
+    }
+
+    .footerNav ul a {
+        color: white;
+        margin: 20px;
+        text-decoration: none;
+        font-size: 1.1em;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .footerBottom {
+        background-color: green;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /*.....................................end footer section......................................................................*/
+}
