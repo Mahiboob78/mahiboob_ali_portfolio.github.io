@@ -152,6 +152,20 @@
         text-decoration: none;
     }
 
+    .popup{
+        width: 700px;
+        height:  630px;;
+    }
+
+    iframe{
+        width: 610px;
+        height: 620px;
+    }
+    .close-btn{
+        width: 45px;
+        height: 45px;
+    }
+    
     /*.....................................end home section....................................................................*/
 
     /*.....................................about section......................................................................*/
@@ -231,10 +245,16 @@
 
     /*.....................................end projects section......................................................................*/
     /*.....................................contact section......................................................................*/
+    .form-control {
+        margin-bottom: 7px;
+        padding-bottom: 10px;
+        position: relative;
+      }
+
     .contact_container {
         width: 80%;
-        height: 90%;
-        padding: 30px 30px;
+        height: 95%;
+        padding: 35px 50px;
         background: lightgreen;
         margin: 0;
 
