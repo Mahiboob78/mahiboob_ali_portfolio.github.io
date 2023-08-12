@@ -104,6 +104,21 @@
         text-decoration: none;
     }
 
+    .popup{
+        margin-top: 15px;
+        width: 800px;
+        height:  630px;;
+    }
+
+    iframe{
+        width: 700px;
+        height: 620px;
+    }
+
+    .close-btn:hover{
+        background: red;
+    }
+
     /*.....................................end home section....................................................................*/
 
     /*.....................................abut section......................................................................*/
@@ -199,10 +214,15 @@
     /*.....................................end projects section......................................................................*/
 
     /*.....................................contact section......................................................................*/
+    .form-control {
+        margin-bottom: 7px;
+        padding-bottom: 10px;
+        position: relative;
+      }
     .contact_container {
         width: 80%;
-        height: 90%;
-        padding: 40px 40px;
+        height: 100%;
+        padding: 30px 50px;
         background: lightgreen;
         margin: 0;
 
