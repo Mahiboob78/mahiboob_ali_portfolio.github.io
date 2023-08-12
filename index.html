@@ -58,7 +58,23 @@
                 <p>I’m working on a professional, visually sophisticated and technologically proficient, responsive
                     and
                     multi-functional React Templates.</p>
-                <a href="#" class="btn">View Resume</a>
+
+                    <div class="popup" id="popup">
+                        <iframe src="Web Designer Resume.pdf" frameborder="0"></iframe>
+                        <button type="button" class="close-btn" onclick="closePopup()">X</button>
+                    </div>
+                    <a href="#" class="btn" onclick="openPopup()">View Resume</a>
+                    <script>
+                        let popup = document.getElementById("popup");
+                    
+                        function openPopup(){
+                            popup.classList.add("open-popup");
+                        }
+                        function closePopup(){
+                            popup.classList.remove("open-popup");
+                        }
+                    </script>
+
             </div>
             <div class="home_right_section">
                 <img src="imgs/ali.jpg" alt="" id="profile_img">
@@ -69,7 +85,7 @@
         <div class="lines">
             <div class="circle"></div>
         </div>
-        <!-- * ***************************************************ABOUT PAGE***************************************************************** * -->
+        <!-- * ***************************************************ABOT PAGE***************************************************************** * -->
         <section id="About" class="about_section">
             <div class="about_left_section">
                 <img class="" src="imgs/mahi.jpg" alt="" id="about_pic1">
@@ -145,7 +161,7 @@
             </div>
         </section>
         <!-- * ***************************************************END SKILLS PAGE***************************************************************** * -->
-        <h2>Projects Page</h2>
+        <h2>Project Page</h2>
         <div class="lines">
             <div class="circle"></div>
         </div>
@@ -153,12 +169,12 @@
         <section id="Projects" class="projects_section">
             <div class="project_container">
                 <div id="Portfolio_container">
-                    <div class="box">On going project...<img src="" class="prt_img"></div>
-                    <div class="box">On going project...<img src="" class="prt_img"></div>
-                    <div class="box">On going project...<img src="" class="prt_img"></div>
-                    <div class="box">On going project...<img src="" class="prt_img"></div>
-                    <div class="box">On going project...<img src="" class="prt_img"></div>
-                    <div class="box">On going project...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
+                    <div class="box">On going projects...<img src="" class="prt_img"></div>
                 </div>
             </div>
         </section>
@@ -170,14 +186,41 @@
         <!-- * ***************************************************CONTACT PAGE***************************************************************** * -->
         <section id="Contact" class="contact_section">
             <div class="contact_container">
-                <input type="text" class="f_input" placeholder="Your Name" />
-                <input type="text" class="f_input" placeholder="Mobile number" />
-                <input type="text" class="f_input" placeholder="Mail ID" />
-                <input type="text" class="f_input" placeholder="Subject" />
-                <textarea rows="5" class="f_input" placeholder="Message" width="500px"></textarea><br>
-                <input type="submit" value="Send" class="btn">
+                <form id="form" class="form">
+
+                    <div class="form-control">
+                        <input type="text" id="name" class="f_input" placeholder="Your Name" />
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="text" id="mobnum" class="f_input" placeholder="Mobile number" />
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="text" id="email" class="f_input" placeholder="Mail ID" />
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="text" id="subject" class="f_input" placeholder="Subject" />
+                        <small>Error message</small>
+                    </div>
+                    
+
+                    <div class="form-control">
+                        <textarea rows="5" id="message" class="f_input" placeholder="Message"></textarea>
+                        <small>Error message</small>
+                    </div>
+
+
+                    <!-- <input type="submit" value="Send" class="btn"> -->
+                    <button type="submit" class="btn">Send</button>
+                </form>
             </div>
         </section>
+        <script src="script.js"></script>
         <!-- * ***************************************************END CONTACT PAGE***************************************************************** * -->
     </main>
 
@@ -237,6 +280,7 @@
             typeSpeed: 50,
         });
     </script>
+    
 </body>
 
 </html>
