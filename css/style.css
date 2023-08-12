@@ -1,5 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+  }
+  .form-control.success input {
+    border-color: var(--success-color);
+  }
+  
+  .form-control.success textarea {
+    border-color: var(--success-color);
+  }
+  
+  .form-control.error input {
+    border-color: var(--error-color);
+  }
+  
+  .form-control.error textarea {
+    border-color: var(--error-color);
+  }
+  
+  .form-control small {
+    font-size: 16px;
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+  }
+  
+  .form-control.error small {
+    visibility: visible;
+  }
+  
 * {
     margin: 0;
     padding: 0;
@@ -166,7 +198,7 @@ nav a:hover:after {
 
 /*.....................................................HOME SECTION...................................................*/
 marquee {
-    color: red;
+    color: purple;
 }
 
 .home_left_section {
@@ -243,6 +275,50 @@ marquee {
     background: transparent;
     border-color: green;
     color: green;
+}
+
+.popup{
+    margin-top: 15px;
+    width: 900px;
+    height:  630px;;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    color: #333;
+    visibility: hidden;     
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+iframe{
+    width: 800px;
+    height: 620px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+}
+.close-btn{
+    width: 50px;
+    height: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.2);
+}
+.close-btn:hover{
+    background: red;
 }
 
 /*.....................................................END HOME SECTION...................................................*/
@@ -421,11 +497,17 @@ h3 {
 /*******************************End Projects Section****************************************************/
 
 /*******************************Contact Section****************************************************/
+.form-control {
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    position: relative;
+  }
+
 .contact_container {
     width: 80%;
-    height: 95%;
+    height: 100%;
     /* margin: auto; */
-    padding: 50px 50px;
+    padding: 40px 50px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
     font-family: 'Open Sans', sans-serif;
     background: lightgreen;
@@ -443,7 +525,7 @@ h3 {
     background-color: rgb(172, 230, 172);
     border: 2px solid green;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /*******************************End Conatct Section****************************************************/
