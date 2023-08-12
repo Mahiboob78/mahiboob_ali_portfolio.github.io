@@ -61,7 +61,7 @@
 
     main {
         width: 100%;
-        height: 770vh;
+        height: 785vh;
         justify-content: center;
 
         /* border: 3px gray solid; */
@@ -163,6 +163,20 @@
         background: green;
         border: 0.15rem solid green;
         text-decoration: none;
+    }
+
+    .popup{
+        width: 380px;
+        height:  500px;;
+    }
+
+    iframe{
+        width: 380px;
+        height: 490px;
+    }
+    .close-btn{
+        width: 35px;
+        height: 35px;
     }
 
     /*.....................................end home section....................................................................*/
@@ -286,11 +300,12 @@
     /*.....................................end projects section......................................................................*/
 
     /*.....................................contact section......................................................................*/
+    
     .contact_container {
         width: 95%;
-        height: 75%;
+        height: 95%;
         margin: 0;
-        padding: 25px 25px;
+        padding: 30px 40px;
 
         /* border: 3px brown solid; */
     }
