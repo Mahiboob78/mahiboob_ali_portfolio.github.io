@@ -1,84 +1,110 @@
-const form = document.getElementById('form');
-const name = document.getElementById('name');
-const mobnum = document.getElementById('mobnum');
-const email = document.getElementById('email');
-const subject = document.getElementById('subject');
-const message = document.getElementById('message');
+const form = document.querySelector('#create-account-form');
+const usernameInput = document.querySelector('#username');
+const mobNumInput = document.querySelector('#mobNum');
+const emailInput = document.querySelector('#email');
+const subjectInput = document.querySelector('#subject');
+const messageInput = document.querySelector('#message');
 
-// Show input error message
-function showError(input, message) {
-  const formControl = input.parentElement;
-  formControl.className = 'form-control error';
-  const small = formControl.querySelector('small');
-  small.innerText = message;
+form.addEventListener('submit', (event)=>{
+    
+    validateForm();
+    console.log(isFormValid());
+    if(isFormValid()==true){
+        submitData();
+     }else {
+         event.preventDefault();
+     }
+     event.preventDefault();
+});
+
+function isFormValid(){
+    const inputContainers = form.querySelectorAll('.input-group');
+    let result = true;
+    inputContainers.forEach((container)=>{
+        if(container.classList.contains('error')){
+            result = false;
+        }
+    });
+    return result;
 }
 
-// Show success outline
-function showSuccess(input) {
-  const formControl = input.parentElement;
-  formControl.className = 'form-control success';
+function validateForm() {
+    //USERNAME
+    if(usernameInput.value.trim()==''){
+        setError(usernameInput, 'Name can not be empty');
+    }else if(usernameInput.value.trim().length <3 || usernameInput.value.trim().length > 20){
+        setError(usernameInput, 'Name must be min 3 and max 20 charecters');
+    }else {
+        setSuccess(usernameInput);
+    }
+    
+    if(mobNumInput.value.trim()==''){
+        setError(mobNumInput, 'Provide Mobile Number');
+    }else if(isMobnumValid(mobNumInput.value)){
+        setSuccess(mobNumInput);
+    }else{
+        setError(mobNumInput, 'Provide valid Mobile Number');
+    }
+
+    //EMAIL
+    if(emailInput.value.trim()==''){
+        setError(emailInput, 'Provide email address');
+    }else if(isEmailValid(emailInput.value)){
+        setSuccess(emailInput);
+    }else{
+        setError(emailInput, 'Provide valid email address');
+    }
+
+    //SUBJECT
+    if(subjectInput.value.trim()==''){
+        setError(subjectInput, 'Subject can not be empty');
+    }else if(subjectInput.value.trim().length <6 || subjectInput.value.trim().length > 20){
+        setError(subjectInput, 'Subject must be min 6 and max 20 charecters');
+    }else {
+        setSuccess(subjectInput);
+    }
+    
+    //MESSAGE
+    if(messageInput.value.trim()==''){
+        setError(messageInput, 'Message can not be empty');
+    }else if(messageInput.value.trim().length <20 || messageInput.value.trim().length >200){
+        setError(messageInput, 'Message min 20 max 200 charecters');
+    }else {
+        setSuccess(messageInput);
+    }
+}
+
+function setError(element, errorMessage) {
+    const parent = element.parentElement;
+    if(parent.classList.contains('success')){
+        parent.classList.remove('success');
+    }
+    parent.classList.add('error');
+    const paragraph = parent.querySelector('p');
+    paragraph.textContent = errorMessage;
+}
+
+function setSuccess(element){
+    const parent = element.parentElement;
+    if(parent.classList.contains('error')){
+        parent.classList.remove('error');
+    }
+    parent.classList.add('success');
+}
+
+// Check Mail ID is valid
+function isEmailValid(email){
+    const reg =/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    return reg.test(email);
 }
 
 // Check Mobile Number is valid
-function checkMobNum(input) {
-  const re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/; 
-  if (re.test(input.value.trim())) {
-    showSuccess(input);
-  } else {
-    showError(input, 'Mobile Number is not valid');
+function isMobnumValid(mobNum) {
+    // const reg = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/; 
+    const reg = /(0|91)?[6-9][0-9]{9}/;
+     
+    return reg.test(mobNum)
   }
-}
+  
 
-// Check email is valid
-function checkEmail(input) {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if (re.test(input.value.trim())) {
-    showSuccess(input);
-  } else {
-    showError(input, 'Email is not valid');
-  }
-}
-
-// Check required fields
-function checkRequired(inputArr) {
-  inputArr.forEach(function(input) {
-    if (input.value.trim() === '') {
-      showError(input, `${getFieldName(input)} is required`);
-    } else {
-      showSuccess(input);
-    }
-  });
-}
-
-// Check input length
-function checkLength(input, min, max) {
-  if (input.value.length < min) {
-    showError(
-      input,
-      `${getFieldName(input)} must be at least ${min} characters`
-    );
-  } else if (input.value.length > max) {
-    showError(
-      input,
-      `${getFieldName(input)} must be less than ${max} characters`
-    );
-  } else {
-    showSuccess(input);
-  }
-}
-
-// Get fieldname
-function getFieldName(input) {
-  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
-// Event listeners
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  checkRequired([name, mobnum, email, subject, message]);
-  // checkLength(mobnum, 6, 10);
-  checkEmail(email);
-  checkMobNum(mobnum);
-  checkLength(message, 30, 200);
-});
