@@ -186,40 +186,52 @@
         <!-- * ***************************************************CONTACT PAGE***************************************************************** * -->
         <section id="Contact" class="contact_section">
             <div class="contact_container">
-                <form id="form" class="form">
-
-                    <div class="form-control">
-                        <input type="text" id="name" class="f_input" placeholder="Your Name" />
-                        <small>Error message</small>
+                <form id="create-account-form" action="" method="GET">
+                    <!-- USERNAME -->
+                    <div class="input-group">
+                        <input type="text" id="username" placeholder="Name" name="username">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Error Message</p>
+                    </div>
+               
+                    <!-- MOBILE NUMBER -->
+                    <div class="input-group">
+                        <input type="text" id="mobNum" placeholder="Mobile Number" name="mobNum">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Error Message</p>
+                    </div>
+                    <!-- EMAIL -->
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email" name="email">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Error Message</p>
+                    </div>
+                      <!-- SUBJECT -->
+                      <div class="input-group">
+                        <input type="text" id="subject" placeholder="Subject" name="subject">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Error Message</p>
+                    </div>
+                    <!-- MESSAGE -->
+                    <div class="input-group">
+                        <textarea type="text" rows="5" id="message" placeholder="Message" name="message" ></textarea>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Error Message</p>
                     </div>
 
-                    <div class="form-control">
-                        <input type="text" id="mobnum" class="f_input" placeholder="Mobile number" />
-                        <small>Error message</small>
-                    </div>
+                    <button type="submit" class="btn">Submit</button>
 
-                    <div class="form-control">
-                        <input type="text" id="email" class="f_input" placeholder="Mail ID" />
-                        <small>Error message</small>
-                    </div>
-
-                    <div class="form-control">
-                        <input type="text" id="subject" class="f_input" placeholder="Subject" />
-                        <small>Error message</small>
-                    </div>
-                    
-
-                    <div class="form-control">
-                        <textarea rows="5" id="message" class="f_input" placeholder="Message"></textarea>
-                        <small>Error message</small>
-                    </div>
-
-
-                    <!-- <input type="submit" value="Send" class="btn"> -->
-                    <button type="submit" class="btn">Send</button>
                 </form>
             </div>
         </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> 
+        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+        <script src="fireConfig.js"></script>
         <script src="script.js"></script>
         <!-- * ***************************************************END CONTACT PAGE***************************************************************** * -->
     </main>
