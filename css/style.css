@@ -233,7 +233,7 @@ marquee {
     display: inline-block;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    background: linear-gradient(120deg, red 20.69%, blue 50.19%, brown 79.69%);
+    background: linear-gradient(120deg, red 20.69%, blue 40.19%, brown 79.69%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -514,19 +514,83 @@ h3 {
     font-size: 0.5em;
     border-radius: 5px;
 
-
     /* border: 3px brown solid; */
 }
 
-.f_input {
-    width: 100%;
-    padding: 0.4rem;
-    margin: 0 0 10px;
-    background-color: rgb(172, 230, 172);
-    border: 2px solid green;
-    border-radius: 10px;
-    font-size: 18px;
+.input-group {
+    margin:5px 0; 
+    position:relative;
 }
+
+.input-group label {
+    display:inline-block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    display:block;
+    width:100%;
+    padding:10px; 
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid green;
+    background-color: rgb(172, 230, 172);  
+}
+
+.input-group textarea{
+    display:block;
+    width:100%;
+    padding:10px; 
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid green;
+    background-color: rgb(172, 230, 172);  
+}
+
+.error textarea {
+    border:3px red solid;
+}
+
+.success textarea {
+    border:3px green solid;
+}
+
+.error input {
+    border:3px red solid;
+}
+
+.success input {
+    border:3px green solid;
+}
+
+ .input-group i {
+     position:absolute;
+     right:10px;
+     top:15px;
+     font-size: medium;
+     visibility: hidden;
+ }
+
+ .success i.fa-check-circle{
+     visibility: visible;
+     color:green;
+ }
+
+ .error i.fa-exclamation-circle {
+    visibility: visible;
+    color:red;
+}
+
+
+ .input-group p {
+     font-size: 15px;
+     color:red;
+     visibility: hidden;
+ }
+
+ .error p {
+     visibility: visible;
+ }
 
 /*******************************End Conatct Section****************************************************/
 
